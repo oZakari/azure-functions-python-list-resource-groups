@@ -32,8 +32,9 @@ jobs:
           source venv/bin/activate
 
       - name: Install dependencies
+        working-directory: src
         run: pip install -r requirements.txt
-        
+
       # Optional: Add step to run tests here
 
       - name: Upload artifact for deployment job
@@ -41,7 +42,7 @@ jobs:
         with:
           name: python-app
           path: |
-            . 
+            .
             !venv/
 
   deploy:
