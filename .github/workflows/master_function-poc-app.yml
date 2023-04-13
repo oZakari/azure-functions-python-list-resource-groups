@@ -33,7 +33,9 @@ jobs:
 
       - name: Install dependencies
         working-directory: src
-        run: pip install -r requirements.txt
+        run: |
+          ls
+          pip install -r requirements.txt
 
       # Optional: Add step to run tests here
 
